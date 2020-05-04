@@ -8,8 +8,5 @@ export const snapshotToData = (
     return undefined;
   }
 
-  return {
-    ...snapshot.data(),
-    ...(idField ? { [idField]: snapshot.id } : null),
-  };
+  return snapshot.data();
 };
